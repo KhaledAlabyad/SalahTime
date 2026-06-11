@@ -40,7 +40,6 @@ In your Waybar `config` (or `config.jsonc`), add `"custom/prayer"` to `modules-c
 
 ```json
 "modules-center": [
-  "...",
   "custom/prayer"
 ]
 ```

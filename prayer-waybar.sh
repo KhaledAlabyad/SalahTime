@@ -6,7 +6,7 @@ readonly TZ="Africa/Cairo"
 readonly AUTH="Egypt"
 readonly CACHE_DIR="$HOME/.cache/waybar-prayer"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly MUSIC_DIR="$SCRIPT_DIR/PrayerNotify"
+readonly AUDIO_DIR="$SCRIPT_DIR/PrayerNotify"
 # ── Daylight Saving Time offset ──────────────────────────────────────────────
 # Set to 1 to add one hour to all prayer times, 0 to disable
 readonly DST_OFFSET=0
@@ -232,7 +232,7 @@ if ((diff > 0 && diff <= 15)); then
   lock="$CACHE_DIR/notified_${TODAY}_${next_name}"
   if [[ ! -f "$lock" ]]; then
     touch "$lock"
-    play_adhan "$MUSIC_DIR/${MP3[$next_name]}"
+    play_adhan "$AUDIO_DIR/${MP3[$next_name]}"
   fi
 fi
 
